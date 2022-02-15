@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 5//EN" "http://www.w3.org/TR/html5/strict.dtd">
+            <html>
+           
+             <center> <head><font size="6" font color="white"> <b> Get Your Parking Spot Information</b></font></br></br>
+                                    <style>
+                                
+                                  
+                                    #map {
+                                      width: 500px;
+                                      height: 400px;
+                                      
+                                      border: 2px solid rgba(10, 0, 10, 3);
+                                              
+                                    }
+                                  </style>
+                                </head>
+                                <body><div class="w3-third">  
+                                <form action="." method="post" enctype="application/x-www-form-urlencoded">
+                                        <tr><th><label for="id_yourid" ><font size="6">Your ID: </font></label></th><td><input id="id_yourstatus" name="yourid" type="integer" input style="font-size:25px;" value='' /></td></tr>
+                                         
+                                          <tr><th><label for="id_yourstatus"><font size="6">Your Status:</label></th><td><select id="id_yourstatus" name="yourstatus" input style="font-size:25px;">
+                                          <option value="ipms_drivers" selected="Student">Student</option>
+                                          <option value="ipms_studentinstant">Student Instant</option>
+                                          <option value="ipms_driversstaff">UNA Staff</option>
+                              
+                                          </select></td></tr></br>
+                                  
+                                          <button type="submit" input style="font-size:25px;">Show My Parking Spot</button>
+                                      </form></br></br>
+                                      
+                              <td xcord='lat'>
+                              <td  ycord='lon'>
+                              
+                                  <div id="map"></div>
+                                  <script>
+                                    function initMap() {
+                                      var mapDiv = document.getElementById('map');
+                                      var map = new google.maps.Map(mapDiv, {
+                                        center: {lat: 34.8093628729, lng: -87.6808437704},
+                                        mapTypeId:google.maps.MapTypeId.SATELLITE,
+                                        zoom: 20
+                                      });
+                              
+                                      var marker = new google.maps.Marker({
+                                        position: {lat: 34.8093628729, lng: -87.6808437704},
+                                        map: map,
+                                        title: 'Hello World!'
+                                        
+                                      });
+                                     
+                                    }
+                                  </script>
+                                  <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+                                      async defer></script>
+                              
+                              
+                                     <body style="background-color:#9966FF;">
+                              
+                                     
+                                     
+                                     <style>
+                         .center2 {
+                           position: absolute; left: 260px; top: 530px;
+                          
+                             
+                         }
+                         
+                         </style>
+        
+        
+                                             
+                  
+                    
+                         <p1> Your Id = <font color="red">36</font>. Parking No = <font color="red">10</font>. Spot No =<font color="red"> 98</font> and parking Cost= <font color="red">5.829</font> minutes at <i> UNA Main Campus </p1></i>
+                         <h2>Intelligent Parking Reservation System of <i> University of North Alabama</h2></i>
+                         
+                 
+                   </body></center>
+                 </html>

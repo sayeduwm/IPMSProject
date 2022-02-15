@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>IPMS</title>
+    </head>
+    <body>
+        <h1>Intelligent parking Management System <br />   (Import Shapefile)</h1>
+        {% if errMsg %}
+        <b><i>{{ errMsg }}</i></b>
+        {% endif %}
+        <form enctype="multipart/form-data" method="post" action="import">
+            {{ form.as_p }}
+            <input type="submit" value="Submit"/>
+            <button type="button" onClick='window.location="/ipms";'>
+                Cancel
+            </button>
+        </form>
+        
+       
+
+    </body>
+</html>
+            
+            
+            

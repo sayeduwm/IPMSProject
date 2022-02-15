@@ -1,0 +1,56 @@
+
+
+
+
+
+<!DOCTYPE html> <html>
+    <head>
+      <title>IPMS</title>
+  <style>
+body {
+        background-image: url("http://s13.postimg.org/yiqldavk5/parking.jpg");
+}</style>
+ </head>
+  
+
+  <body>
+     <h1>Intelligent Parking Management System (IPMS)</h1>
+        {% if shapefiles %}
+        <b>Available Shapefiles:</b>
+        <table border="0" cellspacing="0" cellpadding="5"
+            style="padding-left:20px">
+            {% for shapefile in shapefiles %}
+            <tr>
+                <td><font style="font-family:monospace">{{shapefile.filename }}</font></td>
+                <td>&nbsp;</td>
+                <td>
+                    <a href="/ipms/edit/{{ shapefile.id }}">
+                        Edit
+                    </a>
+                </td>
+                <td>&nbsp;</td>
+                <td>
+                    <a href="/ipms/export/{{ shapefile.id }}">
+                        Export
+                    </a>
+                </td>
+                <td>&nbsp;</td>
+                <td>
+                    <a href="/ipms/delete/{{ shapefile.id }}">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+ 
+       </table>
+        {% endif %}
+        <button type="button" 
+            onClick='window.location="/ipms/import";'>
+            Import New Shapefile
+        </button>
+    </body>
+</html>
+                    
+
+
